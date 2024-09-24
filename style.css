@@ -1,127 +1,171 @@
-/*Selector universal*/
-*{
-    margin: 0; /*Espacio exterior*/
-    padding: 0; /*Espacio interior*/
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/*Selector de tipo etiqueta*/
-body{
+body {
     background-color: rgb(252, 227, 180);
-    font-family: Arial, sans-serif; /*Tipografia*/
-    line-height: 1.5; /*Interlineado*/
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6; 
 }
 
-.contenedor{
+.contenedor {
     width: 80%;
     margin: 0 auto;
+    max-width: 1200px; 
 }
 
-header{
+/* Header */
+header {
     background-color: rgb(252, 227, 137);
-    color:rgb(240, 156, 1);
-    padding: 10px 0;
+    color: rgb(240, 156, 1);
+    padding: 20px 0; 
+    text-align: center; 
 }
 
-/*Selectores avanzados*/
-header h1{
-    text-align: center;
-    justify-content: center;
+header h1 {
+    font-size: 2.5em; 
+    margin-bottom: 15px; 
 }
 
-nav ul{
+nav ul {
     list-style: none;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
-
-nav ul li{
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px; 
 }
 
-nav ul li a{
-    color:black;
+nav ul li a {
+    color: black;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: rgb(240, 156, 1); 
 }
 
-/*Selector de tipo clase*/
-.estilo{
-    background-color: aliceblue;
-    padding: 20px;
-    margin: 20px 0;
-    transition: background-color 0.3s ease;
+/* Sección Hero */
+.hero {
+    background-image: url('imagen-hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0; 
 }
 
-.estilo:hover{
-    background-color: rgb(181, 221, 255);
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    background-color: #ffcc00; /* Color de fondo dorado */
-    color: #ffffff; /* Color del texto blanco */
+    background-color: rgb(255, 104, 49);
+    color: white;
+    padding: 15px 30px; 
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #ff9900; /* Cambio de color de fondo al hacer hover */
-  }
-  
-  .cta-button:active {
-    background-color: #cc7a00; /* Color más oscuro al hacer clic */
-  }
-  
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; 
+}
 
-  /*CSS de las Cards*/
+.cta-button:hover {
+    background-color: orangered;
+}
 
-  /* Estilos para los cards del menú */
+/* Secciones generales */
+.estilo {
+    background-color: aliceblue;
+    padding: 40px 0; 
+    margin-bottom: 30px; 
+    text-align: center; 
+}
+
+.estilo h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: rgb(240, 156, 1); 
+}
+
+.estilo p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Menú */
 .menu-contenedor {
     display: flex;
-    justify-content: left;
-    gap: 20px;
+    justify-content: space-around;
     flex-wrap: wrap;
-  }
-  
-  .card {
+}
+
+.card {
     background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    margin: 20px;
+    text-align: center;
     transition: transform 0.3s ease;
-    width: 250px;
-    margin-bottom: 20px;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card img {
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card img {
     width: 100%;
-    height: 200px;
+    height: 200px; 
     object-fit: cover;
-    border-bottom: 4px solid rgb(252, 227, 180);
-  }
-  
-  .card h3 {
-    font-size: 22px;
-    color: #333;
-    margin: 15px 0 5px;
-  }
-  
-  .card p {
-    font-size: 18px;
-    color: #ff0000;
-    margin-bottom: 15px;
-  }
-  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Personal y Redes Sociales (Agregar estilos similares a .menu-contenedor y .card) */
+.personal-contenedor, .redes-contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#nuestra-historia {
+    display: flex; /* Usamos flexbox para crear el diseño de dos columnas */
+    justify-content: space-between; /* Distribuye el espacio entre las columnas */
+}
+
+#nuestra-historia img { 
+    max-width: 100%; /* Evita que la imagen se desborde de su contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Footer */
+footer {
+    background-color: rgb(252, 227, 137);
+    text-align: center;
+    padding: 20px 0;
+    position: relative; 
+}
