@@ -1,0 +1,127 @@
+/*Selector universal*/
+*{
+    margin: 0; /*Espacio exterior*/
+    padding: 0; /*Espacio interior*/
+    box-sizing: border-box;
+}
+
+/*Selector de tipo etiqueta*/
+body{
+    background-color: rgb(252, 227, 180);
+    font-family: Arial, sans-serif; /*Tipografia*/
+    line-height: 1.5; /*Interlineado*/
+}
+
+.contenedor{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: rgb(252, 227, 137);
+    color:rgb(240, 156, 1);
+    padding: 10px 0;
+}
+
+/*Selectores avanzados*/
+header h1{
+    text-align: center;
+    justify-content: center;
+}
+
+nav ul{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+}
+
+
+nav ul li{
+    margin: 0 15px;
+}
+
+nav ul li a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*Selector de tipo clase*/
+.estilo{
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+.estilo:hover{
+    background-color: rgb(181, 221, 255);
+}
+
+.cta-button {
+    background-color: #ffcc00; /* Color de fondo dorado */
+    color: #ffffff; /* Color del texto blanco */
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff9900; /* Cambio de color de fondo al hacer hover */
+  }
+  
+  .cta-button:active {
+    background-color: #cc7a00; /* Color más oscuro al hacer clic */
+  }
+  
+
+  /*CSS de las Cards*/
+
+  /* Estilos para los cards del menú */
+.menu-contenedor {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid rgb(252, 227, 180);
+  }
+  
+  .card h3 {
+    font-size: 22px;
+    color: #333;
+    margin: 15px 0 5px;
+  }
+  
+  .card p {
+    font-size: 18px;
+    color: #ff0000;
+    margin-bottom: 15px;
+  }
+  
